@@ -1,3 +1,3 @@
 # Noji
 
-Frontend Repo of https://Noji.so
+Frontend Repo of https://mint.noji.so
