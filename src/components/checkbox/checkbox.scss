@@ -1,0 +1,25 @@
+@import "../../variables.scss";
+
+.noji-check {
+  width: 20px;
+  height: 20px;
+  display: flex;
+  border-radius: 5px;
+  background-color: $primary;
+  //   position: absolute;
+  //   top: 0;
+  //   left:0;
+}
+
+.noji-checkbox {
+  position: relative;
+  width: fit-content;
+  height: 20px;
+  input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    opacity: 0;
+  }
+}

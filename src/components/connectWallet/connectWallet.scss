@@ -1,0 +1,31 @@
+@import "../../variables.scss";
+
+.disconnect-bg-child {
+  width: inherit;
+  height: inherit;
+  position: absolute;
+}
+
+.main-disconnect-contain {
+  position: relative;
+  z-index: 2;
+  max-width: 600px !important;
+  min-height: 300px !important;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  h4 {
+    margin-bottom: 3rem;
+    font-size: 1.25rem;
+  }
+
+  > div {
+    display: flex;
+    column-gap: 1.6rem;
+
+    button:last-child {
+      background-color: $primary;
+      color: #2f2d2e;
+    }
+  }
+}
