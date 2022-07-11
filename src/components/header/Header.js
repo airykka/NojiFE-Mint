@@ -4,7 +4,6 @@ import twitter from "../../images/twitter.svg";
 import discord from "../../images/discord.svg";
 import close from "../../images/close.svg";
 import "./header.scss";
-import { useLocation } from "react-router-dom";
 import { ConnectWallet } from "..";
 
 export const Header = () => {
@@ -25,10 +24,6 @@ export const Header = () => {
   ];
   const [open, setOpen] = useState(false);
 
-  const { pathname } = useLocation();
-
-  const isMintPage = pathname.includes("mint");
-
   return (
     <div>
       <div className="header">
@@ -43,18 +38,7 @@ export const Header = () => {
           ))}
         </section>
 
-        {isMintPage ? (
-          <ConnectWallet />
-        ) : (
-          <section>
-            <a href="https://twitter.com/0xAddie" style={{ margin: 0 }}>
-              <img src={twitter} alt="twitter" />
-            </a>
-            <a href="https://discord.gg/em7QQ7scq3" style={{ margin: 0 }}>
-              <img src={discord} alt="discord" />
-            </a>
-          </section>
-        )}
+        <ConnectWallet />
       </div>
 
       <div className="header-sm">
@@ -103,11 +87,9 @@ export const Header = () => {
                   </a>
                 </div>
 
-                {isMintPage && (
-                  <div>
-                    <ConnectWallet />
-                  </div>
-                )}
+                <div>
+                  <ConnectWallet />
+                </div>
               </article>
 
               <p>© 2022 Eto Inc. | Privacy Policy | Legal & License</p>
